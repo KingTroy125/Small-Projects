@@ -1,0 +1,123 @@
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 2rem 1rem 2rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Underline effect for section headers */
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.footer-section:hover h3::after {
+    width: 75px;
+}
+
+.footer-section p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+.social-link:hover {
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Copyright Section */
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .footer {
+        padding: 3rem 1rem 1rem 1rem;
+    }
+
+    .social-links {
+        gap: 0.5rem;
+    }
+
+    .social-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
