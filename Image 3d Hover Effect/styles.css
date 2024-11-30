@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #ffffffc6; /* Optional: Add a background color */
+}
+
+.card3d {
+    width: 100%;
+    height: 450px; /* Increased height */
+    perspective: 1000px;
+    border-radius: 15px;
+    cursor: pointer;
+    animation: float 6s ease-in-out infinite;
+}
+
+.card3d-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.card3d-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 3D Hover Effect */
+.card3d:hover .card3d-inner {
+    transform: rotateY(10deg) rotateX(5deg);
+    box-shadow: 
+        -20px 20px 30px rgba(0, 0, 0, 0.2),
+        0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth reset when not hovering */
+.card3d-inner {
+    transform: rotateY(0) rotateX(0);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Optional: Add floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
