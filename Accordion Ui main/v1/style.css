@@ -9,6 +9,7 @@ body{
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
+
 .item{
     background-color: #E9E9E9;
     width: 280px;
@@ -19,6 +20,7 @@ body{
     cursor: pointer;
     transition: 0.5s;
 }
+
 .item .question{
     display: flex;
     justify-content: start;
